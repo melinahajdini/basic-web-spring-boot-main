@@ -36,7 +36,7 @@
     <form th:action="${'/ViewFitnessUsers'}" th:object="${fitnessUser}" method="post">
         <label>
             Emri: <br/>
-            <input th:field="${fitnessUser.name}" type="text" />
+            <input th:field="${fitnessUser.firstName}" type="text" />
         </label><br/>
 
         <label>
@@ -50,7 +50,7 @@
 
         <label>
             Gjinia:
-            <select th:field="${fitnessUser.gjinia}">
+            <select th:field="${fitnessUser.gender}">
                 <option value="mashkull">Mashkull</option>
                 <option value="femer">Femer</option>
             </select>
