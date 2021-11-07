@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Fitness App</title>
+    <style>
+        .link-div{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content:center;
+        }
+
+        .form-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        label{
+            margin: 25px 0;
+        }
+        a{
+            margin: 3%;
+        }
+    </style>
 </head>
 <body>
+<div class="link-div">
+    <a href="/ViewFitnessUsers">Lista e anetareve</a>
+    <a href="#">Shto anetaret e ri</a>
+</div>
+
+<div class="form-div">
+    <h1>Shto anetare te ri</h1> <br/>
+    <form th:action="${'/ViewFitnessUsers'}" th:object="${fitnessUser}" method="post">
+        <label>
+            Emri: <br/>
+            <input th:field="${fitnessUser.name}" type="text" />
+        </label><br/>
+
+        <label>
+            Mbiemri:<br/>
+            <input th:field="${fitnessUser.lastName}" type="text" />
+        </label><br/>
+        <label>
+            Mosha:<br/>
+            <input th:field="${fitnessUser.age}" type="number" />
+        </label><br/>
+
+        <label>
+            Gjinia:
+            <select th:field="${fitnessUser.gjinia}">
+                <option value="mashkull">Mashkull</option>
+                <option value="femer">Femer</option>
+            </select>
+        </label><br/>
+        <label>
+            <input type="checkbox"/>
+            Aktiv
+        </label> <br/>
+
+        <input type="submit"/>
+        <input  type="reset" />
+    </form>
+</div>
 
 </body>
 </html>
