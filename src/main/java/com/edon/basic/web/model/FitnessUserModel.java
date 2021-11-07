@@ -1,19 +1,19 @@
 package com.edon.basic.web.model;
 
-public class FitnessUser {
+public class FitnessUserModel {
 
-    private String name;
+    private String firstName;
     private String lastName;
     private int age;
-    private String gjinia;
+    private String gender;
     private boolean isActive;
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -32,12 +32,12 @@ public class FitnessUser {
         this.age = age;
     }
 
-    public String getGjinia() {
-        return gjinia;
+    public String getGender() {
+        return gender;
     }
 
-    public void setGjinia(String gjinia) {
-        this.gjinia = gjinia;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public boolean isActive() {
