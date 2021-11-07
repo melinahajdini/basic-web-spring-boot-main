@@ -1,0 +1,10 @@
+<html>
+<head>
+    <title>List of Employees</title>
+</head>
+<body>
+    <ul>
+        <li th:each="employee : ${employees}" th:text="${employee.id + ' ' + employee.firstName+' '+employee.lastName}"></li>
+    </ul>
+</body>
+</html>

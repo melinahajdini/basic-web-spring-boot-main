@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telefoni</title>
+</head>
+<body>
+<form th:object="${telefon}">
+    <label>Id: </label>
+    <input type="number" th:field="${telefon.id}"/> <br/>
+    <label>Brand Name:</label>
+    <input type="text" th:field="${telefon.brandName}"/> <br/>
+    <label>Model: </label>
+    <input type="text" th:field="${telefon.model}"/> <br/>
+
+    <label>Operating System:</label>
+    <select th:field="${telefon.os}">
+        <option value="ios">iOS</option>
+        <option value="android">android</option>
+        <option value="windows">windows</option>
+    </select> <br/>
+
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

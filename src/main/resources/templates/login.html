@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Login</title>
+</head>
+<body>
+<center>
+    <form action="/login" method="post" th:object="${loginModel}">
+        <label>Username:</label><br>
+        <input th:field="${loginModel.username}" type="text" placeholder="Username:"><br>
+        <label>Password:</label><br>
+        <input  th:field="${loginModel.password}" type="password"><br><br>
+        <span th:text="${error}"></span><br>
+        <input type="submit" value="Login" />
+    </form>
+</center>
+</body>
+</html>
