@@ -7,11 +7,11 @@
 <body>
 <h1>Fitness Users List</h1>
 <table>
-    <tr>
-        <td th:text="${fitnessUser.name}"></td>
+    <tr th:each="fitnessUser: ${fitnessUsers}">
+        <td th:text="${fitnessUser.firstName}"></td>
         <td th:text="${fitnessUser.lastName}"></td>
         <td th:text="${fitnessUser.age}"></td>
-        <td th:text="${fitnessUser.gjinia}"></td>
+        <td th:text="${fitnessUser.gender}"></td>
         <td>
             <button>Delete this user</button>
         </td>

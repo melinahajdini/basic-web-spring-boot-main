@@ -6,19 +6,23 @@
         .link-div{
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
+
             justify-content:center;
+            color:purple;
         }
 
         .form-div{
-            width: 100%;
+
             display: flex;
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            color:purple;
+
         }
         label{
             margin: 25px 0;
+
         }
         a{
             margin: 3%;
@@ -26,14 +30,14 @@
     </style>
 </head>
 <body>
-<div class="link-div">
-    <a href="/ViewFitnessUsers">Lista e anetareve</a>
+<div class="link-div" style="background-color:grey, color-purple">
+    <a href="/viewfitnessusers">Lista e anetareve </a>
     <a href="#">Shto anetare te ri</a>
 </div>
 
 <div class="form-div">
     <h1>Shto anetare te ti</h1> <br/>
-    <form th:action="${'/ViewFitnessUsers'}" th:object="${fitnessUser}" method="post">
+    <form th:action="${'/viewfitnessusers'}" th:object="${fitnessUser}" method="post" style="background-color:grey">
         <label>
             Emri: <br/>
             <input th:field="${fitnessUser.firstName}" type="text" />
