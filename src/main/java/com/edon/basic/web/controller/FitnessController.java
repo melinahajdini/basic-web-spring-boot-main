@@ -25,4 +25,9 @@ public class FitnessController {
         model.addAttribute("fitnessUsers", fitnessUsers);
         return "ViewFitnessUsers";
     }
+
+    @GetMapping("/viewfitnessusers")
+    public String getViewUsers(){
+        return "ViewFitnessUsers";
+    }
 }
